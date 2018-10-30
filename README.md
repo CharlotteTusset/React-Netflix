@@ -17,6 +17,8 @@ To do:
 2. In homepage.js, button to direct to showCard   
 3. In showCard, display movies with JavaScript  
 
+#### Result
 
+![Screenshot](img/sprint1.png)   
 
 
