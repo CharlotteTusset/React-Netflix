@@ -1,10 +1,14 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+}
+
+body{
+  background-color: #282c34;
+  color: #61dafb;
+}
+.main-title{
+  text-align: center;
 }
 
 .App-header {
@@ -29,4 +33,92 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul {
+  background-color: #222;
+  margin: 0;
+}
+
+.menu li {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+  
+.home-button{
+  display: block;
+  background-color: #282C34;
+  border: 1px solid #61dafb;
+  height: 50px;
+  border-radius:10px; 
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 200px;
+  text-decoration: none;
+  line-height: 50px; 
+  text-align: center;
+
+
+}
+
+.home-button:hover{
+  background-color: #61dafb;
+  color: #282C34;
+  transition: all .15s ease-in-out;
+}
+
+.card_contaiener{
+  max-width: 1980px;
+  margin: 0 auto;
+}
+
+.search{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  
+  padding-right: 10px;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.wrapper-card{
+  margin-top: 25px;
+  box-shadow: 4px 5px 11px rgba(62, 197, 255, 0.25);
+  
+}
+
+.wrapper-card,img{
+  
+  width: 320px;
+  float: left;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+h3{
+  height: 50px;
+  text-align: center;
 }
