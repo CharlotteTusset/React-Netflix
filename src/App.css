@@ -40,26 +40,6 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
-.menu ul {
-  background-color: #222;
-  margin: 0;
-}
-
-.menu li {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
-}
- 
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
   
 .home-button {
   display: block;
@@ -88,7 +68,7 @@ ul {
   margin: 0 auto;
 }
 
-.search {
+.movie-container {
   display: flex;
   flex-wrap: wrap;
   border-radius: 4px;
@@ -117,4 +97,28 @@ ul {
 h3 {
   height: 50px;
   text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  background-color: #fff;
+  align-items: center; 
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid #61dafb;
+  color: #282C34;
+  font-size: 18px;
+  padding: 4px;
+  margin: 6px;
+}
+
+.actors{
+  font-weight: bold;
+  color: #61dafb;
 }
