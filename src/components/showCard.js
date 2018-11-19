@@ -1,29 +1,29 @@
 import React, {Component} from 'react';
 import MovieData from '../data/movie.json';
-import Header from './header';
+import Search from './Search';
 
 class Movies extends Component {
-  constructor(){
-  	super();
+  constructor(props){
+  	super(props);
   	this.state = {
-  		search: '...',
+  		search: '',
+  		movies: MovieData.movie
   	};
   }
-
   // callback
-  handleSearch = (searchValue) => {
-  	this.setState({search: searchValue});
+  handleChange(e) {
+  	this.setState({search: e.target.value});
   }
 
   render() {
-  	let filteredMovies = MovieData.movie.filter(
-  		(movieDetails) => {
-  			return movieDetails.Title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-  		}
-  	);
+  	const filteredMovies = this.state.movies.filter((searchText) => {
+  		let search = searchText.Actors.toLowerCase() + " " + searchText.Title.toLowerCase() + " " + searchText.Year;
+  		return search.match(this.state.search);
+  	});
+
     return (
       <div className="card_container">
-      	  <Header callback={this.handleSearch}/>
+      	  <Search StrUser={this.state.search} Funct={this.handleChange.bind(this)}/>
       	  <div className="movie-container">
 		    	{filteredMovies.map((movieDetails)=>{
 		    	return (
@@ -32,6 +32,7 @@ class Movies extends Component {
 		    			<h3>{movieDetails.Title}</h3>
 		    			<p>{movieDetails.Year}</p>
 		    			<p>{movieDetails.Plot}</p>
+		    			<p className="actors">{movieDetails.Actors}</p>
 		    		</div>
 		    	);
 		    	})}
